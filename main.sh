@@ -11,6 +11,11 @@ konumum=$(mosquitto_sub -h farmer.cloudmqtt.com -p 10085 -u ttrenipy -P oA3j4GOS
 }
 
 
+#Main loop
+
+while true
+do
+
 konumu_al
 #echo $konumum
 
@@ -61,7 +66,7 @@ case "$konumum" in
 esac
 
 #Deneme icin bir deger ata
-SECONDS=10800
+#SECONDS=10800
 
 #Sureye göre dakika hesapla logaritmik
 dakika=$(( SECONDS/60 ))
@@ -98,6 +103,9 @@ fi
 
 adim=$(echo "scale=0; ($pozisyon+$sure)*1640/720" | bc -l)
 
+#round to multiple of 4
+adim=$(echo "scale=0; $adim/4" | bc -l)
+adim=$(echo "scale=0; $adim*4" | bc -l)
 
 #echo $sure
 #echo $adim
@@ -106,4 +114,7 @@ adim=$(echo "scale=0; ($pozisyon+$sure)*1640/720" | bc -l)
 #turn clockwise, wait, and come back CCW
 ./git_gel.sh $adim 
 
-	
+#wait 10sec for next round
+sleep 10
+
+done	
