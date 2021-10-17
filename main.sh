@@ -1,35 +1,43 @@
 #!/bin/bash
 
+#Kapi saati için ana kodlar
+
+
 #Konumu al fonksiyonu
+# CloudMQQT ve OwnTracks kullanilarak guncel komutu alma
+
 konumu_al () {
 konumum=$(mosquitto_sub -h farmer.cloudmqtt.com -p 10085 -u ttrenipy -P oA3j4GOS5zHv -t owntracks/ttrenipy/ozi -C 1 -F '%J' | jq -r .payload.inregions) 
 }
 
 
 konumu_al
-echo $konumum
+#echo $konumum
 
-#Ofisteyim loopu
+# Ofisteyim loopu #########
+
 while [[ $konumum == *ofis* ]];
 do
-echo $konumum
+#echo $konumum
 
 #Tekrar konum al
 konumu_al 
 
-sleep 1
+#sleep one minute
+sleep 60
+
 #hala ofisteysen bash'deki seconds değişkenini sıfırla
 SECONDS=0
 
 done
+################
+
 
 
 #Ofiste değilim kapı tıklanmasını bekliyorum
 ./cift_tiklama.py
 
 # Kapi tıklandı pozisyonu guncelle 
-
-#Konumu al
 konumu_al 
 
 #konuma göre akrep hareketi icin dakika hesapla
@@ -91,9 +99,9 @@ fi
 adim=$(echo "scale=0; ($pozisyon+$sure-2)*1692/720" | bc -l)
 
 
-echo $sure
-echo $adim
-echo $SECONDS
+#echo $sure
+#echo $adim
+#echo $SECONDS
 
 #turn clockwise, wait, and come back CCW
 ./git_gel.sh $adim 

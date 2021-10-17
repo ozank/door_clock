@@ -7,7 +7,7 @@ delay=0.003
 cycles=$1
 
 # Define input outputs
-#sudo su
+#sudo su  # instead run the code using root
 
 # LCD_D4 - DIRECTION  
 echo 100 > /sys/class/gpio/export
@@ -44,7 +44,7 @@ echo out > /sys/class/gpio/gpio118/direction
 
 #Set Step Size
 # 0 0 0 tam adim
-# 1  0 0 yarim adim  (132.5 adim 1 saat), 1600 adim 12 saat
+# 1  0 0 yarim adim  (132.5 adim 1 saat), 1600 adim 12 saat?
 # 0 1 0 ceyrek adim (530 adim 1 saat)
 
 echo 1 > /sys/class/gpio/gpio110/value
