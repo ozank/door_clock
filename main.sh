@@ -61,7 +61,7 @@ case "$konumum" in
 esac
 
 #Deneme icin bir deger ata
-SECONDS=3600
+SECONDS=10800
 
 #Sureye göre dakika hesapla logaritmik
 dakika=$(( SECONDS/60 ))
@@ -96,7 +96,7 @@ fi
 #tam tur (12 saat) 1692 adım
 
 
-adim=$(echo "scale=0; ($pozisyon+$sure-2)*1692/720" | bc -l)
+adim=$(echo "scale=0; ($pozisyon+$sure)*1640/720" | bc -l)
 
 
 #echo $sure

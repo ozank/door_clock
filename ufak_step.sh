@@ -60,6 +60,9 @@ echo 1 > /sys/class/gpio/gpio108/value
 #ENABLE (0'da enable olur)
 echo 0 > /sys/class/gpio/gpio118/value
 
+#wait for enable
+sleep 0.1
+
 if [ $direction -eq 1 ]
 then
 

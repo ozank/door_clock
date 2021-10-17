@@ -59,11 +59,12 @@ echo 1 > /sys/class/gpio/gpio108/value
 #ENABLE (0'da enable olur)
 echo 0 > /sys/class/gpio/gpio118/value
 
-#wait for initialization
-sleep 0.1 
 
 #Set direction (clockwise direction)
 echo 0 > /sys/class/gpio/gpio100/value
+
+#wait for initialization
+sleep 0.2 
 
 for (( i=1; i<=$cycles; i++ ))
 do
@@ -80,6 +81,9 @@ sleep 10
 #Set direction (clockwise direction)
 echo 1 > /sys/class/gpio/gpio100/value
 
+#wait for initialization
+sleep 0.2 
+
 for (( i=1; i<=$cycles; i++ ))
 do
 
@@ -90,7 +94,7 @@ do
 done
 
 #disable yapmadan önce biraz bekle
-sleep 1
+sleep 0.1
 
 #DISABLE
 echo 1 > /sys/class/gpio/gpio118/value
