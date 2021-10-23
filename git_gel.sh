@@ -64,7 +64,7 @@ echo 0 > /sys/class/gpio/gpio118/value
 echo 0 > /sys/class/gpio/gpio100/value
 
 #wait for initialization
-sleep 0.2 
+sleep 0.3 
 
 for (( i=1; i<=$cycles; i++ ))
 do
@@ -90,11 +90,11 @@ do
 	echo 0 > /sys/class/gpio/gpio102/value
 	sleep $delay
 	echo 1 > /sys/class/gpio/gpio102/value
-	sleep $delay
+#	sleep $delay
 done
 
 #disable yapmadan önce biraz bekle
-sleep 0.1
+sleep 0.3
 
 #DISABLE
 echo 1 > /sys/class/gpio/gpio118/value
