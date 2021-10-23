@@ -34,3 +34,9 @@ Sat Oct 23 09:48:40 UTC 2021
   "kampus"
 ]
 0
+Sat Oct 23 09:49:42 UTC 2021
+[
+  "ankara",
+  "kampus"
+]
+1
