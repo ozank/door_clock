@@ -10,6 +10,14 @@ konumu_al () {
 konumum=$(mosquitto_sub -h farmer.cloudmqtt.com -p 10085 -u ttrenipy -P oA3j4GOS5zHv -t owntracks/ttrenipy/ozi -C 1 -F '%J' | jq -r .payload.inregions) 
 }
 
+#Calisma klasorunu degistir
+cd /home/chip/door_clock/
+
+#Mevcut IP adresini log dosyasına kaydet
+ip -4 a show wlan0 >>ip_log.md 
+#commit to git repo
+git commit -am "ip changed"
+git push
 
 #Main loop
 
@@ -113,6 +121,11 @@ adim=$(echo "scale=0; $adim*4" | bc -l)
 
 #turn clockwise, wait, and come back CCW
 ./git_gel.sh $adim 
+
+#Kapi vurus log dosyasini guncelle
+date >> time_log.md
+echo "$konumum" >> time_log.md
+echo "$dakika" >> time_log.md
 
 #wait 10sec for next round
 sleep 10
