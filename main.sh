@@ -122,7 +122,10 @@ adim=$(echo "scale=0; $adim*8" | bc -l)
 #echo $SECONDS
 
 #turn clockwise, wait, and come back CCW
-./git_gel.sh $adim 
+#./git_gel.sh $adim 
+
+#turn clockwise, wait, and come backe in CW
+./git_git.sh $adim 
 
 #Kapi vurus log dosyasini guncelle
 date >> time_log.md
