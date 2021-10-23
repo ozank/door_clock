@@ -127,6 +127,10 @@ date >> time_log.md
 echo "$konumum" >> time_log.md
 echo "$dakika" >> time_log.md
 
+#commit to git repo
+git commit -am "door event"
+git push
+
 #wait 10sec for next round
 sleep 10
 
