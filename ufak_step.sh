@@ -2,7 +2,7 @@
 
 # Two arguments step  cyles, direction
 
-delay=0.003
+delay=0.00
 cycles=$1
 # Direction 1: CW, 0: CCW
 direction=$2
@@ -48,8 +48,8 @@ echo out > /sys/class/gpio/gpio118/direction
 # 1  0 0 yarim adim  (132.5 adim 1 saat), 1600 adim 12 saat
 # 0 1 0 ceyrek adim (530 adim 1 saat)
 
-echo 1 > /sys/class/gpio/gpio110/value
-echo 0 > /sys/class/gpio/gpio114/value
+echo 0 > /sys/class/gpio/gpio110/value
+echo 1 > /sys/class/gpio/gpio114/value
 echo 0 > /sys/class/gpio/gpio116/value
 
 #SET  RESET AND ENABLE
@@ -61,7 +61,7 @@ echo 1 > /sys/class/gpio/gpio108/value
 echo 0 > /sys/class/gpio/gpio118/value
 
 #wait for enable
-sleep 0.1
+sleep 0.4
 
 if [ $direction -eq 1 ]
 then
@@ -74,16 +74,17 @@ fi
 
 
 for (( i=1; i<=$cycles; i++ ))
+#for i in {1..$cycles}
 do
 
 	echo 0 > /sys/class/gpio/gpio102/value
 	sleep $delay
 	echo 1 > /sys/class/gpio/gpio102/value
-	sleep $delay
+ #	sleep $delay
 done
 
 #disable yapmadan önce biraz bekle
-sleep 1
+sleep 0.4
 
 #DISABLE
 echo 1 > /sys/class/gpio/gpio118/value

@@ -3,7 +3,7 @@
 # single argument step 
 # go to initial position,in clockwise direction, wait and come back
 
-delay=0.003
+delay=0.000
 cycles=$1
 
 # Define input outputs
@@ -47,8 +47,8 @@ echo out > /sys/class/gpio/gpio118/direction
 # 1  0 0 yarim adim  (132.5 adim 1 saat), 1600 adim 12 saat?
 # 0 1 0 ceyrek adim (530 adim 1 saat)
 
-echo 1 > /sys/class/gpio/gpio110/value
-echo 0 > /sys/class/gpio/gpio114/value
+echo 0 > /sys/class/gpio/gpio110/value
+echo 1 > /sys/class/gpio/gpio114/value
 echo 0 > /sys/class/gpio/gpio116/value
 
 #SET  RESET AND ENABLE
@@ -72,7 +72,7 @@ do
 	echo 0 > /sys/class/gpio/gpio102/value
 	sleep $delay
 	echo 1 > /sys/class/gpio/gpio102/value
-	sleep $delay
+#	sleep $delay
 done
 
 #wait for other direction
