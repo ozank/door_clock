@@ -109,9 +109,9 @@ fi
 #tam tur (12 saat) 1692 adım
 
 #ceyrek adim 1 saat 540 adim
-#ceyrek adim 12 saat 6480 adim
+#ceyrek adim 12 saat 6400 adim
 
-adim=$(echo "scale=0; ($pozisyon+$sure)*6480/720" | bc -l)
+adim=$(echo "scale=0; ($pozisyon+$sure)*6400/720" | bc -l)
 
 #round to multiple of 8
 adim=$(echo "scale=0; $adim/8" | bc -l)
