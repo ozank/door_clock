@@ -25,3 +25,6 @@
 4: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
     inet 192.168.1.74/24 brd 192.168.1.255 scope global dynamic wlan0
        valid_lft 79591sec preferred_lft 79591sec
+4: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
+    inet 192.168.1.74/24 brd 192.168.1.255 scope global dynamic wlan0
+       valid_lft 78997sec preferred_lft 78997sec
