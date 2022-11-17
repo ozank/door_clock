@@ -362,3 +362,11 @@ Thu Nov 17 07:45:50 UTC 2022
   "ofis"
 ]
 62
+Thu Nov 17 08:31:52 UTC 2022
+[
+  "bolum",
+  "ankara",
+  "kampus",
+  "ofis"
+]
+41
