@@ -501,3 +501,9 @@ Tue Nov 22 09:11:10 UTC 2022
   "ofis"
 ]
 96
+Tue Nov 22 09:51:23 UTC 2022
+[
+  "kampus",
+  "ankara"
+]
+5
