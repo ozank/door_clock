@@ -1878,3 +1878,10 @@ Wed Dec 14 09:31:53 UTC 2022
   "bolum"
 ]
 10292
+Wed Dec 14 09:36:04 UTC 2022
+[
+  "kampus",
+  "ankara",
+  "bolum"
+]
+10296
