@@ -2168,3 +2168,9 @@ Fri Dec 16 10:53:58 UTC 2022
 Mon Dec 19 10:25:54 UTC 2022
 null
 17546
+Tue Dec 20 05:16:44 UTC 2022
+[
+  "bolum",
+  "ankara"
+]
+18677
