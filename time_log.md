@@ -2186,3 +2186,9 @@ Tue Dec 20 05:38:32 UTC 2022
   "ankara"
 ]
 18699
+Tue Dec 20 06:02:59 UTC 2022
+[
+  "bolum",
+  "ankara"
+]
+18723
