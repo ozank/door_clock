@@ -2927,3 +2927,10 @@ Thu Dec 29 11:44:45 UTC 2022
   "ankara"
 ]
 32025
+Thu Dec 29 11:45:33 UTC 2022
+[
+  "bolum",
+  "kampus",
+  "ankara"
+]
+32026
