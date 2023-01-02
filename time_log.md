@@ -3396,3 +3396,10 @@ Mon Jan  2 08:37:42 UTC 2023
   "bolum"
 ]
 37598
+Mon Jan  2 09:22:17 UTC 2023
+[
+  "kampus",
+  "ankara",
+  "bolum"
+]
+37642
