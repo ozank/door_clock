@@ -3870,3 +3870,9 @@ Sun Jan  8 16:48:56 UTC 2023
   "kampus"
 ]
 46729
+Mon Jan  9 07:43:24 UTC 2023
+[
+  "ankara",
+  "kampus"
+]
+47623
