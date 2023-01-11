@@ -4163,3 +4163,10 @@ Wed Jan 11 07:38:48 UTC 2023
   "bolum"
 ]
 50499
+Wed Jan 11 07:41:16 UTC 2023
+[
+  "ankara",
+  "kampus",
+  "bolum"
+]
+50501
